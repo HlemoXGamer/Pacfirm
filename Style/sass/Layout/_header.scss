@@ -1,0 +1,81 @@
+header {
+  background-color: $color5;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 20px;
+  z-index: 100;
+  box-shadow: 0 0 15px rgba(#000000, 0.7);
+  .container {
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .our-bars {
+        display: none;
+        @include max(tablet) {
+          display: block;
+          color: #fff;
+          padding-right: 25px;
+          cursor: pointer;
+        }
+      }
+      .logo {
+        img {
+          width: 140px;
+          @include max(laptob) {
+            width: 120px;
+          }
+        }
+      }
+      .links {
+        margin: 0;
+        padding: 0;
+        transition: height 0.3s;
+        @include max(tablet) {
+          position: absolute;
+          height: 0px;
+          visibility: hidden;
+        }
+        &.active {
+          visibility: visible;
+          height: 269px;
+          display: block;
+          position: absolute;
+          top: 85px;
+          left: 0;
+          background-color: #333;
+          width: 100%;
+          li {
+            display: block;
+            text-align: center;
+            padding: 10px 2px;
+            &:not(:last-child) {
+              border-bottom: 1px solid #ccc;
+            }
+            a {
+              font-size: 20px;
+            }
+          }
+        }
+        li {
+          display: inline-block;
+          a {
+            display: inline-block;
+            padding: 5px 15px;
+            font-size: 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: 0.3s;
+            &:hover {
+              color: $color2;
+            }
+            @include max(laptob) {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

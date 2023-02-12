@@ -1,0 +1,56 @@
+// BreakPoints
+@mixin max($point){
+  @if ($point == 'mobile'){
+    @media (max-width:576px) {
+      @content
+    }
+  };
+  @if ($point == 'tablet'){
+    @media (max-width:768px) {
+      @content
+    }
+  };
+  @if ($point == 'laptob'){
+    @media (max-width:991px) {
+      @content
+    }
+  };
+  @if ($point == 'desktop'){
+    @media (max-width:1200px) {
+      @content
+    }
+  };
+  @if ($point == 'large'){
+    @media (max-width:1400px) {
+      @content
+    }
+  };
+};
+
+@mixin min($point){
+  @if ($point == 'mobile'){
+    @media (min-width:576px) {
+      @content
+    }
+  };
+  @if ($point == 'tablet'){
+    @media (min-width:768px) {
+      @content
+    }
+  };
+  @if ($point == 'laptob'){
+    @media (min-width:991px) {
+      @content
+    }
+  };
+  @if ($point == 'desktop'){
+    @media (min-width:1200px) {
+      @content
+    }
+  };
+  @if ($point == 'large'){
+    @media (min-width:1400px) {
+      @content
+    }
+  };
+};

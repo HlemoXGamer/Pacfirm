@@ -1,0 +1,25 @@
+.container{
+  margin: auto;
+  padding: {
+    left: 15px;
+    right: 15px;
+  }
+  @include min(mobile){
+    width: 540px;
+  }
+  @include min(tablet){
+    width: 720px;
+  }
+  @include min(laptob){
+    width: 960px;
+  }
+  @include min(desktop){
+    width: 1140px;
+  }
+  @include min(large){
+    width: 1320px;
+  }
+};
+body{
+  font-family: 'Montserrat', sans-serif;
+}
